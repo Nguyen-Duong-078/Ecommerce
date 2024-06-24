@@ -13,10 +13,18 @@
 
                     <div class="card-body">
                         @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Success',
+                                        text: '{{ session('status') }}',
+                                        confirmButtonText: 'OK'
+                                    });
+                                });
+                            </script>
                         @endif
+
 
                         <form method="POST" action="{{ route('password.email') }}">
                             @csrf

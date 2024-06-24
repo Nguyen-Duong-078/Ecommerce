@@ -24,10 +24,17 @@
                                         autocomplete="email" autofocus>
 
                                     @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function() {
+                                                Swal.fire({
+                                                    icon: 'error',
+                                                    title: 'Sai thông tin đăng nhập',
+                                                    text: '{{ $message }}',
+                                                });
+                                            });
+                                        </script>
                                     @enderror
+
                                 </div>
                             </div>
 

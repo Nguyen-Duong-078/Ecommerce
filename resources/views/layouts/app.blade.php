@@ -21,7 +21,7 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="{{ asset('themes') }}/client/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="{{ asset('themes') }}/client/images/favicon.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <meta property="og:title" content="Reader | Hugo Personal Blog Template" />
     <meta property="og:description" content="This is meta description" />
     <meta property="og:type" content="website" />
@@ -50,6 +50,9 @@
 
     <!-- Main Script -->
     <script src="{{ asset('themes') }}/client/js/script.js"></script>
+    <!-- Include SweetAlert2 CSS and JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </body>
 
